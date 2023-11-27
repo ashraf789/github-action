@@ -15,7 +15,7 @@ namespace VSTO_Add_in
         {
         }
 
-        private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
+            private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
         }
 
