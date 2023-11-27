@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VISTO_Add_in.Properties {
+namespace VSTO_Add_in.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

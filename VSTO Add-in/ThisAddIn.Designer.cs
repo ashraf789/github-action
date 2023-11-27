@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 #pragma warning disable 414
-namespace VISTO_Add_in {
+namespace VSTO_Add_in {
     
     
     /// 
