@@ -24,8 +24,7 @@ namespace VSTO_Add_in
             return 1;
         }
 
-
-        private void Test2()
+                    private void Test2()
         {
             return 1;
         }
