@@ -1,0 +1,38 @@
+name: dotnet format
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+env:
+ BRANCH: "${GITHUB_REF#refs/heads/}"
+
+jobs:
+  check-format:
+    runs-on: windows-latest
+
+    steps:
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.x'
+
+      - name: Install dotnet-format tool
+        run: dotnet tool install -g dotnet-format
+
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Run dotnet format
+        run: dotnet format --folder --verbosity diagnostic
+     
+      - name: Commit files
+        run: |
+          if (!(git diff --exit-code --quiet))
+          {
+            git config user.name github-actions[bot]
+            git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+            git add .
+            git commit -m "run dotnet-format" -a
+            git push origin ${{ env.BRANCH }}
+          }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
-using Word = Microsoft.Office.Interop.Word;
-using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Word;
+using Office = Microsoft.Office.Core;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace VSTO_Add_in
 {
@@ -27,10 +27,11 @@ namespace VSTO_Add_in
         /// </summary>
         private void InternalStartup()
         {
+            // temp
             this.Startup += new System.EventHandler(ThisAddIn_Startup);
             this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
         }
-        
+
         #endregion
     }
 }
