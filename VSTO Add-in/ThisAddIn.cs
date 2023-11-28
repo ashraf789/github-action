@@ -19,6 +19,11 @@ namespace VSTO_Add_in
         {
         }
 
+        private void Test()
+        {
+
+        }
+
         #region VSTO generated code
 
         /// <summary>
